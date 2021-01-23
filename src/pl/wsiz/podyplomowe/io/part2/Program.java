@@ -14,5 +14,8 @@ public class Program {
         employee2.lastname = "Nowak";
         employee2.age = 30;
         employee2.print();
+
+        Employee employee3 = Employee.read();
+        employee3.print();
     }
 }
