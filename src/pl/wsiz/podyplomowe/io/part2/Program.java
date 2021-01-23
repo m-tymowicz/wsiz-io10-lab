@@ -7,6 +7,6 @@ public class Program {
 
         employee.firstname = "Jan";
         employee.lastname = "Kowalski";
-        employee.age = 30;
+        employee.age = 32;
     }
 }
