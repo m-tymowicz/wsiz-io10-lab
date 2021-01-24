@@ -6,12 +6,11 @@ public class Program {
         Company company = new Company();
 
         Employee employee1 = new Employee("Jan", "Kowalski", 32);
-        employee1.print();
-
         Employee employee2 = new Employee("Anna", "Nowak", 30);
-        employee2.print();
 
         company.add(employee1);
         company.add(employee2);
+
+        company.printEmployees();
     }
 }
