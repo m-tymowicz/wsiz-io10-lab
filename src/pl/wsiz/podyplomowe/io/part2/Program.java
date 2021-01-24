@@ -11,6 +11,9 @@ public class Program {
         company.add(employee1);
         company.add(employee2);
 
+        Employee employee3 = new Employee("Anna", "Nowak", 30);
+        company.add(employee3);
+
         company.printEmployees();
     }
 }

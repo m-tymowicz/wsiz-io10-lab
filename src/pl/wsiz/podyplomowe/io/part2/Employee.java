@@ -17,6 +17,10 @@ public class Employee {
         System.out.printf("%s %s %d\n", firstname, lastname, age);
     }
 
+    boolean isEqual(Employee employee) {
+        return firstname.equals(employee.firstname) && lastname.equals(employee.lastname) && age == employee.age;
+    }
+
     static Employee read() {
         Scanner scanner = new Scanner(System.in);
 
