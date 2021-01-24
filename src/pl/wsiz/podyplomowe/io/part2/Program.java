@@ -8,11 +8,10 @@ public class Program {
         Employee employee1 = new Employee("Jan", "Kowalski", 32);
         Employee employee2 = new Employee("Anna", "Nowak", 30);
 
-        company.add(employee1);
-        company.add(employee2);
+        company.addEmployee(employee1);
+        company.addEmployee(employee2);
 
-        Employee employee3 = new Employee("Anna", "Nowak", 30);
-        company.add(employee3);
+        company.addEmployee();
 
         company.printEmployees();
     }

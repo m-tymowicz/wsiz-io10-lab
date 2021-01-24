@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Company {
     private final ArrayList<Employee> employees = new ArrayList<>();
 
-    void add(Employee newEmployee) {
+    void addEmployee(Employee newEmployee) {
         for (Employee employee : employees) {
             if (employee.isEqual(newEmployee)) {
                 System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
@@ -14,6 +14,12 @@ public class Company {
         }
 
         employees.add(newEmployee);
+    }
+
+    void addEmployee() {
+        Employee newEmployee = Employee.read();
+
+        addEmployee(newEmployee);
     }
 
     void printEmployees() {
