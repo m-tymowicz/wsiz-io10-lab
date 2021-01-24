@@ -22,6 +22,15 @@ public class Company {
         addEmployee(newEmployee);
     }
 
+    void removeEmployee(int employeeIndex) {
+        if (employeeIndex < 1 || employeeIndex > employees.size()) {
+            System.out.println("Lista nie zawiera pracownika o podanym numerze porządkowym.");
+            return;
+        }
+
+        employees.remove(employeeIndex - 1);
+    }
+
     void printEmployees() {
         System.out.println("------------------");
 
