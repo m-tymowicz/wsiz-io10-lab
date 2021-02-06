@@ -8,9 +8,9 @@ public class Program {
 
         Company company = new Company();
 
-        company.addEmployee(new Employee("Jan", "Kowalski", 32, Sex.MALE));
-        company.addEmployee(new Employee("Anna", "Nowak", 30, Sex.FEMALE));
-        company.addEmployee(new Employee("Katarzyna", "Janda", 21, Sex.FEMALE));
+        company.addEmployee(new Employee("Jan", "Kowalski", 32, Sex.MALE, 4000));
+        company.addEmployee(new Employee("Anna", "Nowak", 30, Sex.FEMALE, 4200));
+        company.addEmployee(new Employee("Katarzyna", "Janda", 21, Sex.FEMALE, 3800));
 
         int operation;
         boolean isWorking = true;
