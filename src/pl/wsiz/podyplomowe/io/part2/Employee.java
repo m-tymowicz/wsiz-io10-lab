@@ -3,18 +3,22 @@ package pl.wsiz.podyplomowe.io.part2;
 import java.util.Scanner;
 
 public class Employee {
-    private String firstname;
-    private String lastname;
-    private int age;
+    private final String firstname;
+    private final String lastname;
+    private final int age;
+    private final Sex sex;
 
-    Employee(String firstname, String lastname, int age) {
+    Employee(String firstname, String lastname, int age, Sex sex) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
+        this.sex = sex;
     }
 
     void print() {
-        System.out.printf("%s %s %d\n", firstname, lastname, age);
+        char sexChar = sex == Sex.FEMALE ? 'K' : 'M';
+
+        System.out.printf("%s %s %d %c\n", firstname, lastname, age, sexChar);
     }
 
     boolean isEqual(Employee employee) {
@@ -33,6 +37,10 @@ public class Employee {
         System.out.print("Podaj wiek:      ");
         int age = scanner.nextInt();
 
-        return new Employee(firstname, lastname, age);
+        System.out.print("Podaj płeć:      ");
+        char sexChar = scanner.next().toUpperCase().charAt(0);
+        Sex sex = sexChar == 'K' ? Sex.FEMALE : Sex.MALE;
+
+        return new Employee(firstname, lastname, age, sex);
     }
 }
