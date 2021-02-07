@@ -8,19 +8,22 @@ public class Employee {
     private final int age;
     private final Sex sex;
     private final int salary;
+    private final String[] skills;
 
-    Employee(String firstname, String lastname, int age, Sex sex, int salary) {
+    Employee(String firstname, String lastname, int age, Sex sex, int salary, String[] skills) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
         this.sex = sex;
         this.salary = salary;
+        this.skills = skills;
     }
 
     void print() {
         char sexChar = sex == Sex.FEMALE ? 'K' : 'M';
+        String skillsStr = String.join(", ", skills);
 
-        System.out.printf("%s %s %d %c %dzł\n", firstname, lastname, age, sexChar, salary);
+        System.out.printf("%s %s %d %c %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
     }
 
     boolean isEqual(Employee employee) {
@@ -46,6 +49,13 @@ public class Employee {
         System.out.print("Podaj zarobki:   ");
         int salary = scanner.nextInt();
 
-        return new Employee(firstname, lastname, age, sex, salary);
+        scanner.nextLine();
+        System.out.print("Podaj umiejętności: ");
+        String[] skills = scanner.nextLine().split(",");
+        for (int i = 0; i < skills.length; i++) {
+            skills[i] = skills[i].trim();
+        }
+
+        return new Employee(firstname, lastname, age, sex, salary, skills);
     }
 }
