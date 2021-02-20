@@ -17,13 +17,13 @@ public class Company {
     }
 
     void addDeveloper() {
-        Employee newEmployee = Developer.read();
+        Employee newEmployee = EmployeeReader.read(EmployeeType.DEVELOPER);
 
         addEmployee(newEmployee);
     }
 
     void addManager() {
-        Employee newEmployee = Manager.read();
+        Employee newEmployee = EmployeeReader.read(EmployeeType.MANAGER);
 
         addEmployee(newEmployee);
     }
