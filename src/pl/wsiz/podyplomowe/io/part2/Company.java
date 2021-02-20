@@ -16,8 +16,14 @@ public class Company {
         employees.add(newEmployee);
     }
 
-    void addEmployee() {
-        Employee newEmployee = Employee.read();
+    void addDeveloper() {
+        Employee newEmployee = Developer.read();
+
+        addEmployee(newEmployee);
+    }
+
+    void addManager() {
+        Employee newEmployee = Manager.read();
 
         addEmployee(newEmployee);
     }
