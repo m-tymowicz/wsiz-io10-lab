@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         Company company = new Company();
@@ -33,10 +34,14 @@ public class Program {
 
                 case 2:
                     company.addDeveloper();
+//                    company.addEmployee(Developer.read());
+
                     break;
 
                 case 3:
                     company.addManager();
+//                    company.addEmployee(Manager.read());
+
                     break;
 
                 case 4:

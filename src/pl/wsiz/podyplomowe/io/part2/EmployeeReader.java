@@ -39,6 +39,7 @@ public class EmployeeReader {
             return new Developer(firstname, lastname, age, sex, salary, skills);
 
         } else {
+
             return new Manager(firstname, lastname, age, sex, salary, skills);
         }
     }
