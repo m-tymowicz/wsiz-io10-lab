@@ -17,4 +17,10 @@ public class Developer extends Employee {
 
         return developer;
     }
+
+    @Override
+    void print() {
+        System.out.print("P ");
+        super.print();
+    }
 }

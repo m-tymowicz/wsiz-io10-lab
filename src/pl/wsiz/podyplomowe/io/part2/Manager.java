@@ -17,4 +17,10 @@ public class Manager extends Employee {
 
         return manager;
     }
+
+    @Override
+    void print() {
+        System.out.print("K ");
+        super.print();
+    }
 }
