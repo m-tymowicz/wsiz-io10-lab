@@ -19,8 +19,7 @@ public class Developer extends Employee {
     }
 
     @Override
-    void print() {
-        System.out.print("P ");
-        super.print();
+    public String toString() {
+        return String.format("P %s", super.toString());
     }
 }

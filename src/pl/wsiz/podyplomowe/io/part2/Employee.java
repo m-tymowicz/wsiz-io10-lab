@@ -22,11 +22,16 @@ public abstract class Employee {
     protected Employee() {
     }
 
-    void print() {
+    @Override
+    public String toString() {
         char sexChar = sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
 
-        System.out.printf("%s %s %d %c %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
+        return String.format("%s %s %d %c %dzł [%s]", firstname, lastname, age, sexChar, salary, skillsStr);
+    }
+
+    void print() {
+        System.out.printf("%s\n", this.toString());
     }
 
     boolean isEqual(Employee employee) {

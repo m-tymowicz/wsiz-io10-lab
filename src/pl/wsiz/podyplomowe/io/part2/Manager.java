@@ -19,8 +19,7 @@ public class Manager extends Employee {
     }
 
     @Override
-    void print() {
-        System.out.print("K ");
-        super.print();
+    public String toString() {
+        return String.format("K %s", super.toString());
     }
 }
