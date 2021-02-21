@@ -22,4 +22,9 @@ public class Developer extends Employee {
     public String toString() {
         return String.format("P %s", super.toString());
     }
+
+    @Override
+    int getTotalSalary() {
+        return getSalary() + (int) (getSalary() * 0.02 * getSkills().length);
+    }
 }

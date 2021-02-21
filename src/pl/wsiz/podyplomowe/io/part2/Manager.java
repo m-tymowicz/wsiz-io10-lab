@@ -30,4 +30,9 @@ public class Manager extends Employee {
     public String toString() {
         return String.format("K %s %d", super.toString(), teamSize);
     }
+
+    @Override
+    int getTotalSalary() {
+        return getSalary() + (int) (getSalary() * 0.05 * (teamSize / 5));
+    }
 }

@@ -9,9 +9,9 @@ public class Program {
 
         Company company = new Company();
 
-        company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 4000, new String[]{}));
-        company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 4200, new String[]{"Java", "CSS"}, 11));
-        company.addEmployee(new Developer("Katarzyna", "Janda", 21, Sex.FEMALE, 3800, new String[]{"CSS"}));
+        company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 3000, new String[]{"Java", "CSS"}));
+        company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 5000, new String[]{"SCRUM"}, 4));
+        company.addEmployee(new Developer("Katarzyna", "Janda", 21, Sex.FEMALE, 4000, new String[]{"CSS"}));
 
         int operation;
         boolean isWorking = true;

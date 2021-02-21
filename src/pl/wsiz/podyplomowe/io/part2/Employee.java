@@ -22,12 +22,22 @@ public abstract class Employee {
     protected Employee() {
     }
 
+    abstract int getTotalSalary();
+
+    protected int getSalary() {
+        return salary;
+    }
+
+    protected String[] getSkills() {
+        return skills;
+    }
+
     @Override
     public String toString() {
         char sexChar = sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
 
-        return String.format("%s %s %d %c %dzł [%s]", firstname, lastname, age, sexChar, salary, skillsStr);
+        return String.format("%s %s %d %c %dzł [%s]", firstname, lastname, age, sexChar, getTotalSalary(), skillsStr);
     }
 
     void print() {
