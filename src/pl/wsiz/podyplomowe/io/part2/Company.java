@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class Company {
     private final ArrayList<Employee> employees = new ArrayList<>();
+    private final ConsoleLogger logger;
+
+    Company(ConsoleLogger logger) {
+        this.logger = logger;
+    }
 
     void addEmployee(Employee newEmployee) {
         for (Employee employee : employees) {

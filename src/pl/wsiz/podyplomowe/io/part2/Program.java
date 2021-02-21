@@ -7,7 +7,7 @@ public class Program {
 
         Scanner scanner = new Scanner(System.in);
 
-        Company company = new Company();
+        Company company = new Company(new ConsoleLogger());
 
         company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 3000, new String[]{"Java", "CSS"}));
         company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 5000, new String[]{"SCRUM"}, 4));
