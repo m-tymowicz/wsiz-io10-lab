@@ -14,11 +14,14 @@ public class Company {
         for (Employee employee : employees) {
             if (employee.isEqual(newEmployee)) {
                 System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
+                logger.error("Próba dodania pracownika o tych samych danych: " + newEmployee);
+
                 return;
             }
         }
 
         employees.add(newEmployee);
+        logger.info("Pracownik dodany (" + newEmployee + ")");
     }
 
     void addDeveloper() {
@@ -36,10 +39,12 @@ public class Company {
     void removeEmployee(int employeeIndex) {
         if (employeeIndex < 1 || employeeIndex > employees.size()) {
             System.out.println("Lista nie zawiera pracownika o podanym numerze porządkowym.");
+            logger.error("Próba usunięcia pracownika o niepoprawnym numerze porządkowym: " + employeeIndex);
             return;
         }
 
-        employees.remove(employeeIndex - 1);
+        Employee employee = employees.remove(employeeIndex - 1);
+        logger.info("Pracownik usunięty (" + employee + ")");
     }
 
     void printEmployees() {

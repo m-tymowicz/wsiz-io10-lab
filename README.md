@@ -367,7 +367,7 @@ INFO: Pracownik dodany (K Anna Kowalczyk 27 K 3000zł [Scrum] 5)
 oraz w przypadku powtórzenia danych:
 
 ```
-ERROR: Próba dodanie pracownika o tych samych danych: K Anna Kowalczyk 27 K 3000zł [Scrum] 5
+ERROR: Próba dodania pracownika o tych samych danych: K Anna Kowalczyk 27 K 3000zł [Scrum] 5
 ```
 
 Rozszerz metodę `removeEmployee` klasy `Company` o dodanie loga w przypadku poprawnego usunięcia pracownika:
