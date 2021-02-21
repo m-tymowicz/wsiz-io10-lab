@@ -10,7 +10,7 @@ public class Program {
         Company company = new Company();
 
         company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 4000, new String[]{}));
-        company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 4200, new String[]{"Java", "CSS"}));
+        company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 4200, new String[]{"Java", "CSS"}, 11));
         company.addEmployee(new Developer("Katarzyna", "Janda", 21, Sex.FEMALE, 3800, new String[]{"CSS"}));
 
         int operation;
@@ -33,14 +33,14 @@ public class Program {
                     break;
 
                 case 2:
-                    company.addDeveloper();
-//                    company.addEmployee(Developer.read());
+//                    company.addDeveloper();
+                    company.addEmployee(Developer.read());
 
                     break;
 
                 case 3:
-                    company.addManager();
-//                    company.addEmployee(Manager.read());
+//                    company.addManager();
+                    company.addEmployee(Manager.read());
 
                     break;
 

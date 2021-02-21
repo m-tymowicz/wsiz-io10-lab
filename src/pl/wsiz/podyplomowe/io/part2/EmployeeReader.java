@@ -40,7 +40,10 @@ public class EmployeeReader {
 
         } else {
 
-            return new Manager(firstname, lastname, age, sex, salary, skills);
+            System.out.print("Podaj rozm. zespołu:");
+            int teamSize = scanner.nextInt();
+
+            return new Manager(firstname, lastname, age, sex, salary, skills, teamSize);
         }
     }
 }
