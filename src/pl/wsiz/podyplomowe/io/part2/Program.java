@@ -5,10 +5,16 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
 
+        FileLogger fileLoggerInfo = new FileLogger("company-info-log.txt", true, false);
+        FileLogger fileLoggerError = new FileLogger("company-error-log.txt", false, true);
+        ConsoleLogger consoleLogger = new ConsoleLogger();
+
+        Logger[] loggers = {fileLoggerInfo, fileLoggerError, consoleLogger};
+
+        MultiLogger multiLogger = new MultiLogger(loggers);
+
         Scanner scanner = new Scanner(System.in);
-        FileLogger fileLogger = new FileLogger("company-log.txt", true, true);
-//        ConsoleLogger consoleLogger = new ConsoleLogger();
-        Company company = new Company(fileLogger);
+        Company company = new Company(multiLogger);
 
         company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 3000, new String[]{"Java", "CSS"}));
         company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 5000, new String[]{"SCRUM"}, 4));
@@ -60,6 +66,7 @@ public class Program {
             }
         }
 
-        fileLogger.close();
+        fileLoggerInfo.close();
+        fileLoggerError.close();
     }
 }
