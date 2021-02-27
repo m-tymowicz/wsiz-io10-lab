@@ -1,6 +1,6 @@
 package pl.wsiz.podyplomowe.io.part2;
 
-public class ConsoleLogger {
+public class ConsoleLogger implements Logger {
 
     public void info(String log) {
         log("INFO ", log);

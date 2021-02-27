@@ -7,6 +7,7 @@ public class Program {
 
         Scanner scanner = new Scanner(System.in);
         FileLogger fileLogger = new FileLogger("company-log.txt");
+//        ConsoleLogger consoleLogger = new ConsoleLogger();
         Company company = new Company(fileLogger);
 
         company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 3000, new String[]{"Java", "CSS"}));
