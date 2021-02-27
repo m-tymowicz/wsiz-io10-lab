@@ -7,8 +7,13 @@ import java.util.Date;
 
 public class FileLogger implements Logger {
     private PrintWriter writer;
+    private boolean logInfo;
+    private boolean logError;
 
-    public FileLogger(String fileName) {
+    public FileLogger(String fileName, boolean logInfo, boolean logError) {
+        this.logInfo = logInfo;
+        this.logError = logError;
+
         try {
             FileOutputStream fileStream = new FileOutputStream(fileName, true);
             this.writer = new PrintWriter(fileStream, true);
@@ -22,11 +27,15 @@ public class FileLogger implements Logger {
     }
 
     public void info(String log) {
-        log("INFO ", log);
+        if (logInfo) {
+            log("INFO ", log);
+        }
     }
 
     public void error(String log) {
-        log("ERROR", log);
+        if (logError) {
+            log("ERROR", log);
+        }
     }
 
     private void log(String prefix, String log) {
