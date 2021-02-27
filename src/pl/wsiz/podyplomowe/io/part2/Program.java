@@ -6,8 +6,8 @@ public class Program {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-        Company company = new Company(new ConsoleLogger());
+        FileLogger fileLogger = new FileLogger("company-log.txt");
+        Company company = new Company(fileLogger);
 
         company.addEmployee(new Developer("Jan", "Kowalski", 32, Sex.MALE, 3000, new String[]{"Java", "CSS"}));
         company.addEmployee(new Manager("Anna", "Nowak", 30, Sex.FEMALE, 5000, new String[]{"SCRUM"}, 4));
@@ -58,5 +58,7 @@ public class Program {
                     System.out.println("Operacja o podanym numerze nie istnieje!");
             }
         }
+
+        fileLogger.close();
     }
 }
